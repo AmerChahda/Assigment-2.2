@@ -5,6 +5,7 @@
 ///      Author: ACH11739
 ////////////////////////////////////////////////////
 #include <iostream>
+#include <iterator>
 #include "FileHandler.h"
 FileHandler::FileHandler(std::string filepath)
 {
@@ -26,24 +27,47 @@ std::string FileHandler::get_file_path()
 	return file_path;
 }
 
-std::string FileHandler::open_file()
+bool FileHandler::open_file()
 	{
-		std::string file_statuse="";
-		std::string line;
+		bool file_statuse="false";
 		std::ifstream my_file(get_file_path());
 		if (my_file.is_open())
 		{
-			file_statuse="The file is open.";
-			while ( std::getline (my_file,line) )
-			    {
-			     std::cout << line << '\n';
-			    }
-
+			std::cout<<"The file is open.\n";
+			return file_statuse="true";
 		}
 		else
 		{
-			file_statuse="Error while opening the file";
+			std::cout<<"Error while opening the file.\n";
+			return file_statuse="false";
 		}
-		my_file.close();
-		return file_statuse;
 	}
+void FileHandler::read_file(bool fstatuse)
+{
+	std::string line;
+	std::ifstream current_file(get_file_path());
+	if (fstatuse)
+	{
+		std::cout<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*="<<get_file_path()<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n";
+		while ( getline (current_file,line) )
+		{
+			std::cout << line << '\n';
+		}
+		std::cout<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= End of the file =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n";
+	}
+			else
+			{
+				std::cout<<"Error while reading the file";
+			}
+}
+void FileHandler::counting_words()
+{
+	std::ifstream current_file(get_file_path());
+	std::istream_iterator<std::string> in{ current_file }, end;
+	std::cout << "Word count: " << std::distance(in, end)<<"\n------------------------------------------\n";
+}
+void FileHandler::exit_file()
+{
+	std::fstream current_file(get_file_path());
+	current_file.close();
+}

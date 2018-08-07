@@ -17,10 +17,13 @@ public:
 	FileHandler();
 	virtual ~FileHandler();
 
-	void set_file_path(std::string fpath);
+	//void set_file_path(std::string fpath);
 
 	std::string get_file_path();
-	std::string open_file();
+	bool open_file();
+	void read_file(bool fstatuse);
+	void counting_words();
+	void exit_file();
 
 private:
 	std::string file_path;

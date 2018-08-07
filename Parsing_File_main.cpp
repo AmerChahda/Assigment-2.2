@@ -10,10 +10,14 @@
 int main ()
 {
 	std::string myfile_path;
+	bool my_file_statuse="false";
 	std::cout<<"Enter the full file path\n";
 	std::getline(std::cin,myfile_path);
 	FileHandler obj_file(myfile_path);
-	std::cout<<obj_file.open_file();
+	my_file_statuse=obj_file.open_file();
+	obj_file.read_file(my_file_statuse);
+	obj_file.counting_words();
+	obj_file.exit_file();
 	return 0;
 }
 
