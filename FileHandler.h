@@ -10,23 +10,23 @@
 
 #include <string>
 #include <fstream>
+#include <iostream>
+#include <iterator>
 
-class FileHandler {
-public:
-	FileHandler(std::string fpath);
-	FileHandler();
-	virtual ~FileHandler();
+class FileHandler
+{
+	public:
 
-	//void set_file_path(std::string fpath);
+		FileHandler(std::string fpath);
+		FileHandler();
+		virtual ~FileHandler();
+		std::string get_file_path();
+		bool open_file();
+		void exit_file();
 
-	std::string get_file_path();
-	bool open_file();
-	void read_file(bool fstatuse);
-	void counting_words();
-	void exit_file();
+	private:
 
-private:
-	std::string file_path;
+		std::string file_path;
 };
 
 #endif /* FILEHANDLER_H_ */

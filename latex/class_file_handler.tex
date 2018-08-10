@@ -1,0 +1,154 @@
+\hypertarget{class_file_handler}{}\section{File\+Handler Class Reference}
+\label{class_file_handler}\index{File\+Handler@{File\+Handler}}
+
+
+{\ttfamily \#include $<$File\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_handler_ab6dc27856e7eef893879d381d62dbc32}{File\+Handler}} (std\+::string fpath)
+\item 
+\mbox{\hyperlink{class_file_handler_a0d1ac8e9911e19255e8b2d99c2d93f43}{File\+Handler}} ()
+\item 
+virtual \mbox{\hyperlink{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}{$\sim$\+File\+Handler}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_file_handler_ad3960a2c229347073f6ffc53e0ebceec}{get\+\_\+file\+\_\+path}} ()
+\item 
+bool \mbox{\hyperlink{class_file_handler_aefc9976ff2b2788298a65eba6d6d27a2}{open\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{class_file_handler_ab8bd470616da49ac3fc662f161db4b9b}{exit\+\_\+file}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_file_handler_a1683e00c3112530e697703c327e21c9b}{file\+\_\+path}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{_file_handler_8h}{File\+Handler.\+h}}
+
+Created on\+: 3 aug. 2018 Author\+: A\+C\+H11739 
+
+Definition at line 16 of file File\+Handler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_file_handler_ab6dc27856e7eef893879d381d62dbc32}\label{class_file_handler_ab6dc27856e7eef893879d381d62dbc32}} 
+\index{File\+Handler@{File\+Handler}!File\+Handler@{File\+Handler}}
+\index{File\+Handler@{File\+Handler}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{File\+Handler()}{FileHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily File\+Handler\+::\+File\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{_file_handler_8cpp}{File\+Handler.\+cpp}}
+
+Created on\+: 3 aug. 2018 Author\+: A\+C\+H11739 
+
+Definition at line 10 of file File\+Handler.\+cpp.
+
+
+
+References file\+\_\+path.
+
+\mbox{\Hypertarget{class_file_handler_a0d1ac8e9911e19255e8b2d99c2d93f43}\label{class_file_handler_a0d1ac8e9911e19255e8b2d99c2d93f43}} 
+\index{File\+Handler@{File\+Handler}!File\+Handler@{File\+Handler}}
+\index{File\+Handler@{File\+Handler}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{File\+Handler()}{FileHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily File\+Handler\+::\+File\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file File\+Handler.\+cpp.
+
+\mbox{\Hypertarget{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}\label{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}} 
+\index{File\+Handler@{File\+Handler}!````~File\+Handler@{$\sim$\+File\+Handler}}
+\index{````~File\+Handler@{$\sim$\+File\+Handler}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+File\+Handler()}{~FileHandler()}}
+{\footnotesize\ttfamily File\+Handler\+::$\sim$\+File\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 19 of file File\+Handler.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_handler_ab8bd470616da49ac3fc662f161db4b9b}\label{class_file_handler_ab8bd470616da49ac3fc662f161db4b9b}} 
+\index{File\+Handler@{File\+Handler}!exit\+\_\+file@{exit\+\_\+file}}
+\index{exit\+\_\+file@{exit\+\_\+file}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{exit\+\_\+file()}{exit\_file()}}
+{\footnotesize\ttfamily void File\+Handler\+::exit\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file File\+Handler.\+cpp.
+
+
+
+References get\+\_\+file\+\_\+path().
+
+
+
+Referenced by Parse\+\_\+\+File\+\_\+content\+::call\+\_\+exit\+\_\+fun().
+
+\mbox{\Hypertarget{class_file_handler_ad3960a2c229347073f6ffc53e0ebceec}\label{class_file_handler_ad3960a2c229347073f6ffc53e0ebceec}} 
+\index{File\+Handler@{File\+Handler}!get\+\_\+file\+\_\+path@{get\+\_\+file\+\_\+path}}
+\index{get\+\_\+file\+\_\+path@{get\+\_\+file\+\_\+path}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{get\+\_\+file\+\_\+path()}{get\_file\_path()}}
+{\footnotesize\ttfamily std\+::string File\+Handler\+::get\+\_\+file\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file File\+Handler.\+cpp.
+
+
+
+References file\+\_\+path.
+
+
+
+Referenced by Parse\+\_\+\+File\+\_\+content\+::counting\+\_\+words(), exit\+\_\+file(), open\+\_\+file(), and Parse\+\_\+\+File\+\_\+content\+::read\+\_\+file().
+
+\mbox{\Hypertarget{class_file_handler_aefc9976ff2b2788298a65eba6d6d27a2}\label{class_file_handler_aefc9976ff2b2788298a65eba6d6d27a2}} 
+\index{File\+Handler@{File\+Handler}!open\+\_\+file@{open\+\_\+file}}
+\index{open\+\_\+file@{open\+\_\+file}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{open\+\_\+file()}{open\_file()}}
+{\footnotesize\ttfamily bool File\+Handler\+::open\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file File\+Handler.\+cpp.
+
+
+
+References get\+\_\+file\+\_\+path().
+
+
+
+Referenced by main(), and Parse\+\_\+\+File\+\_\+content\+::read\+\_\+file().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_file_handler_a1683e00c3112530e697703c327e21c9b}\label{class_file_handler_a1683e00c3112530e697703c327e21c9b}} 
+\index{File\+Handler@{File\+Handler}!file\+\_\+path@{file\+\_\+path}}
+\index{file\+\_\+path@{file\+\_\+path}!File\+Handler@{File\+Handler}}
+\subsubsection{\texorpdfstring{file\+\_\+path}{file\_path}}
+{\footnotesize\ttfamily std\+::string File\+Handler\+::file\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file File\+Handler.\+h.
+
+
+
+Referenced by File\+Handler(), and get\+\_\+file\+\_\+path().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_file_handler_8h}{File\+Handler.\+h}}\item 
+\mbox{\hyperlink{_file_handler_8cpp}{File\+Handler.\+cpp}}\end{DoxyCompactItemize}
