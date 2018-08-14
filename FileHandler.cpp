@@ -4,7 +4,13 @@
 ///  Created on: 3 aug. 2018
 ///      Author: ACH11739
 ////////////////////////////////////////////////////
-
+/**
+ * FileHandler.cpp
+ * @author Amer Chahda AC.
+ * @date 2018-08-03
+ *
+ * @brief This cpp file contain the implementation of FileHandler class which is response to open and close the txt-file
+ */
 #include "FileHandler.h"
 
 FileHandler::FileHandler(std::string filepath)
@@ -25,7 +31,11 @@ std::string FileHandler::get_file_path()
 {
 	return file_path;
 }
-
+/**
+ * \brief This function will open the txt file
+ * \return file_statuse a boolean value of the file status "True" if the file was successfully open or "False" if not
+ *
+ */
 bool FileHandler::open_file()
 {
 	bool file_statuse = "false";
@@ -41,46 +51,10 @@ bool FileHandler::open_file()
 		return file_statuse="false";
 	}
 }
-/*void FileHandler::read_file(bool fstatuse)
-{
-	std::string line;
-	std::ifstream current_file(get_file_path());
-	if (fstatuse)
-	{
-		std::cout<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*="<<get_file_path()<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n";
-		while ( getline (current_file,line) )
-		{
-			std::cout << line << '\n';
-		}
-		std::cout<<"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= End of the file =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n";
-	}
-	else
-	{
-		std::cout<<"Error while reading the file";
-	}
-}
-void FileHandler::counting_words()
-{
-	std::ifstream current_file(get_file_path());
-	std::istream_iterator<std::string> in{ current_file }, end;
-	std::cout << "Word count: " << std::distance(in, end)<<"\n------------------------------------------\n";
-}
-void FileHandler::search_after_word( std::string key_word)
-{
-	bool flag_word_exist;
-	std::string line;
-	std::ifstream current_file(get_file_path());
-	while (getline(current_file, line))
-	{
-	   if (line.find(key_word) != std::string::npos)
-	   {
-		   std::cout << line << std::endl;
-		   flag_word_exist="true";
-       }
-	}
-	if (!flag_word_exist)
-		std::cout << " not found\n";
-}*/
+
+/**
+ * This function to close the file
+ */
 void FileHandler::exit_file()
 {
 	std::fstream current_file(get_file_path());

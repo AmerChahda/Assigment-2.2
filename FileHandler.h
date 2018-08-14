@@ -1,9 +1,10 @@
-////////////////////////////////////////////////////
-/// FileHandler.h
-///
-///  Created on: 3 aug. 2018
-///      Author: ACH11739
-////////////////////////////////////////////////////
+/**
+ * FileHandler.h
+ * @author Amer Chahda AC.
+ * @date 2018-08-03
+ *
+ * @brief This header file contain a declaration of FileHandler class which is response to open and close the txt-file
+ */
 
 #ifndef FILEHANDLER_H_
 #define FILEHANDLER_H_
@@ -26,7 +27,7 @@ class FileHandler
 
 	private:
 
-		std::string file_path;
+		std::string file_path; ///< variable to save the path of the file.
 };
 
 #endif /* FILEHANDLER_H_ */

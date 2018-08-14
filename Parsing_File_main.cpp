@@ -26,8 +26,8 @@
  */
 int main ()
 {
-	std::string myfile_path; //!< Variables to save the path of the file.
-	std::string key_word; //!< Variables to save the searching word.
+	std::string myfile_path; ///< Variables to save the path of the file.
+	std::string key_word; //!< key_word this variables to save the searching word.
 	std::vector <std::string> word_vec; //!< Vector of string to save the words from the txt file and use it for searching.
 	bool my_file_statuse="false";
 	std::cout<<"Enter the full file path\n";

@@ -2,6 +2,11 @@
 \label{class_parse___file__content}\index{Parse\+\_\+\+File\+\_\+content@{Parse\+\_\+\+File\+\_\+content}}
 
 
+This Class is response to\+: $\ast$\+Read the file and show it on the screan. $\ast$\+Create a vector to save the words with out punctuation and close the txt-\/file. $\ast$\+Shows the number of words in the file. $\ast$\+Searching after a specific word in the file.  
+
+
+
+
 {\ttfamily \#include $<$Parse\+Filecontent.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -13,8 +18,8 @@
 \item 
 virtual \mbox{\hyperlink{class_parse___file__content_af3c8fc07e2f9a0fdafb596adbc1e167a}{$\sim$\+Parse\+\_\+\+File\+\_\+content}} ()
 \item 
-void \mbox{\hyperlink{class_parse___file__content_aa535d5103a95ab10efa158088c228354}{print\+\_\+vector}} (std\+::vector$<$ std\+::string $>$ v)
-\item 
+void \mbox{\hyperlink{class_parse___file__content_afdee39f521e6d6350f8f3d691850030e}{print\+\_\+vector}} (std\+::vector$<$ std\+::string $>$ word\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em this function to print out the word vector on the user screen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_parse___file__content_ab268b997f33a90a9ce0881a8571b44d2}{read\+\_\+file}} (bool fstatuse, std\+::vector$<$ std\+::string $>$ \&word\+\_\+vec)
 \item 
 void \mbox{\hyperlink{class_parse___file__content_ae3ba604aada833588554be25c5c9a607}{counting\+\_\+words}} ()
@@ -27,13 +32,21 @@ void \mbox{\hyperlink{class_parse___file__content_a87e06838393e70610ae87439c2203
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_file_handler}{File\+Handler}} \mbox{\hyperlink{class_parse___file__content_a9c8b30de899c7c814c22b444146c54d9}{m\+\_\+working\+\_\+file}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em An object from \mbox{\hyperlink{class_file_handler}{File\+Handler}} class to be able to use easly the function open\+\_\+file which declare in the \mbox{\hyperlink{class_file_handler}{File\+Handler}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+This Class is response to\+: $\ast$\+Read the file and show it on the screan. $\ast$\+Create a vector to save the words with out punctuation and close the txt-\/file. $\ast$\+Shows the number of words in the file. $\ast$\+Searching after a specific word in the file. 
+
+\mbox{\hyperlink{_parse_filecontent_8h}{Parse\+Filecontent.\+h}} \begin{DoxyAuthor}{Author}
+Amer Chahda AC. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018-\/08-\/03$<$ std\+::locale, std\+::isalpha 
+\end{DoxyDate}
 
 
-Definition at line 18 of file Parse\+Filecontent.\+h.
+Definition at line 23 of file Parse\+Filecontent.\+h.
 
 
 
@@ -77,9 +90,9 @@ Definition at line 19 of file Parse\+Filecontent.\+cpp.
 \subsubsection{\texorpdfstring{call\+\_\+exit\+\_\+fun()}{call\_exit\_fun()}}
 {\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::call\+\_\+exit\+\_\+fun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+This function call the exit\+\_\+fun which located in \mbox{\hyperlink{class_file_handler}{File\+Handler}} class doing this through the object that we created from the File\+Handlerclass as a private attribute in \mbox{\hyperlink{class_parse___file__content}{Parse\+\_\+\+File\+\_\+content}} this called composition 
 
-
-Definition at line 89 of file Parse\+Filecontent.\+cpp.
+Definition at line 116 of file Parse\+Filecontent.\+cpp.
 
 
 
@@ -95,9 +108,20 @@ Referenced by main().
 \subsubsection{\texorpdfstring{counting\+\_\+words()}{counting\_words()}}
 {\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::counting\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+This function to counting the words inside the text file using istream\+\_\+iterator which ignore the white space and distance function std\+::distance(in, end)~\newline
+it is a ready function to measure the distance between start address to the end address 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in} & first address. \\
+\hline
+\mbox{\tt in}  & {\em end} & last sddress. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance The distance between them. 
+\end{DoxyReturn}
 
 
-Definition at line 69 of file Parse\+Filecontent.\+cpp.
+Definition at line 87 of file Parse\+Filecontent.\+cpp.
 
 
 
@@ -107,15 +131,24 @@ References File\+Handler\+::get\+\_\+file\+\_\+path(), and m\+\_\+working\+\_\+f
 
 Referenced by main().
 
-\mbox{\Hypertarget{class_parse___file__content_aa535d5103a95ab10efa158088c228354}\label{class_parse___file__content_aa535d5103a95ab10efa158088c228354}} 
+\mbox{\Hypertarget{class_parse___file__content_afdee39f521e6d6350f8f3d691850030e}\label{class_parse___file__content_afdee39f521e6d6350f8f3d691850030e}} 
 \index{Parse\+\_\+\+File\+\_\+content@{Parse\+\_\+\+File\+\_\+content}!print\+\_\+vector@{print\+\_\+vector}}
 \index{print\+\_\+vector@{print\+\_\+vector}!Parse\+\_\+\+File\+\_\+content@{Parse\+\_\+\+File\+\_\+content}}
 \subsubsection{\texorpdfstring{print\+\_\+vector()}{print\_vector()}}
-{\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::print\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::print\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{word\+\_\+vec }\end{DoxyParamCaption})}
 
 
 
-Definition at line 23 of file Parse\+Filecontent.\+cpp.
+this function to print out the word vector on the user screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em word\+\_\+vec} & the vector where we save the word from the text file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Parse\+Filecontent.\+cpp.
 
 
 
@@ -127,9 +160,16 @@ Referenced by read\+\_\+file().
 \subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
 {\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{bool}]{fstatuse,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{word\+\_\+vec }\end{DoxyParamCaption})}
 
+Read the text file with passing two parameters\+: 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstatuse} & it is a boolean parameter to be sure that is the file is open. \\
+\hline
+\mbox{\tt out}  & {\em word\+\_\+vec} & this vector to save the words and only the words from the text file. \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 31 of file Parse\+Filecontent.\+cpp.
+Definition at line 41 of file Parse\+Filecontent.\+cpp.
 
 
 
@@ -145,9 +185,17 @@ Referenced by main().
 \subsubsection{\texorpdfstring{search\+\_\+after\+\_\+word()}{search\_after\_word()}}
 {\footnotesize\ttfamily void Parse\+\_\+\+File\+\_\+content\+::search\+\_\+after\+\_\+word (\begin{DoxyParamCaption}\item[{std\+::string}]{key\+\_\+word,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{word\+\_\+vec }\end{DoxyParamCaption})}
 
+This function looking after a word in the text file\+: 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\+\_\+word} & user word. \\
+\hline
+\mbox{\tt in}  & {\em word\+\_\+vec} & the vector of words we created from the text file. ~\newline
+before searching after the word it is good to be sure that all the letters in it are small. \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 76 of file Parse\+Filecontent.\+cpp.
+Definition at line 101 of file Parse\+Filecontent.\+cpp.
 
 
 
@@ -164,7 +212,11 @@ Referenced by main().
 
 
 
-Definition at line 33 of file Parse\+Filecontent.\+h.
+An object from \mbox{\hyperlink{class_file_handler}{File\+Handler}} class to be able to use easly the function open\+\_\+file which declare in the \mbox{\hyperlink{class_file_handler}{File\+Handler}} class. 
+
+
+
+Definition at line 38 of file Parse\+Filecontent.\+h.
 
 
 

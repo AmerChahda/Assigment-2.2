@@ -2,13 +2,18 @@
 \label{class_file_handler}\index{File\+Handler@{File\+Handler}}
 
 
+This header file contain a declaration of \mbox{\hyperlink{class_file_handler}{File\+Handler}} class which is response to open and close the txt-\/file.  
+
+
+
+
 {\ttfamily \#include $<$File\+Handler.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_file_handler_ab6dc27856e7eef893879d381d62dbc32}{File\+Handler}} (std\+::string fpath)
-\item 
+\begin{DoxyCompactList}\small\item\em This cpp file contain the implementation of \mbox{\hyperlink{class_file_handler}{File\+Handler}} class which is response to open and close the txt-\/file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_file_handler_a0d1ac8e9911e19255e8b2d99c2d93f43}{File\+Handler}} ()
 \item 
 virtual \mbox{\hyperlink{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}{$\sim$\+File\+Handler}} ()
@@ -16,22 +21,28 @@ virtual \mbox{\hyperlink{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}{$
 std\+::string \mbox{\hyperlink{class_file_handler_ad3960a2c229347073f6ffc53e0ebceec}{get\+\_\+file\+\_\+path}} ()
 \item 
 bool \mbox{\hyperlink{class_file_handler_aefc9976ff2b2788298a65eba6d6d27a2}{open\+\_\+file}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This function will open the txt file. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_file_handler_ab8bd470616da49ac3fc662f161db4b9b}{exit\+\_\+file}} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{class_file_handler_a1683e00c3112530e697703c327e21c9b}{file\+\_\+path}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em variable to save the path of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\mbox{\hyperlink{_file_handler_8h}{File\+Handler.\+h}}
+This header file contain a declaration of \mbox{\hyperlink{class_file_handler}{File\+Handler}} class which is response to open and close the txt-\/file. 
 
-Created on\+: 3 aug. 2018 Author\+: A\+C\+H11739 
+\mbox{\hyperlink{_file_handler_8h}{File\+Handler.\+h}} \begin{DoxyAuthor}{Author}
+Amer Chahda AC. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018-\/08-\/03 
+\end{DoxyDate}
 
-Definition at line 16 of file File\+Handler.\+h.
+
+Definition at line 17 of file File\+Handler.\+h.
 
 
 
@@ -42,11 +53,21 @@ Definition at line 16 of file File\+Handler.\+h.
 \subsubsection{\texorpdfstring{File\+Handler()}{FileHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily File\+Handler\+::\+File\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
 
+
+
+This cpp file contain the implementation of \mbox{\hyperlink{class_file_handler}{File\+Handler}} class which is response to open and close the txt-\/file. 
+
 \mbox{\hyperlink{_file_handler_8cpp}{File\+Handler.\+cpp}}
 
-Created on\+: 3 aug. 2018 Author\+: A\+C\+H11739 
+Created on\+: 3 aug. 2018 Author\+: A\+C\+H11739 \mbox{\hyperlink{_file_handler_8cpp}{File\+Handler.\+cpp}} \begin{DoxyAuthor}{Author}
+Amer Chahda AC. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018-\/08-\/03 
+\end{DoxyDate}
 
-Definition at line 10 of file File\+Handler.\+cpp.
+
+Definition at line 16 of file File\+Handler.\+cpp.
 
 
 
@@ -60,7 +81,7 @@ References file\+\_\+path.
 
 
 
-Definition at line 15 of file File\+Handler.\+cpp.
+Definition at line 21 of file File\+Handler.\+cpp.
 
 \mbox{\Hypertarget{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}\label{class_file_handler_a1ce10cd0ad31b313a8d526fba6f1e676}} 
 \index{File\+Handler@{File\+Handler}!````~File\+Handler@{$\sim$\+File\+Handler}}
@@ -70,7 +91,7 @@ Definition at line 15 of file File\+Handler.\+cpp.
 
 
 
-Definition at line 19 of file File\+Handler.\+cpp.
+Definition at line 25 of file File\+Handler.\+cpp.
 
 
 
@@ -81,9 +102,9 @@ Definition at line 19 of file File\+Handler.\+cpp.
 \subsubsection{\texorpdfstring{exit\+\_\+file()}{exit\_file()}}
 {\footnotesize\ttfamily void File\+Handler\+::exit\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+This function to close the file 
 
-
-Definition at line 84 of file File\+Handler.\+cpp.
+Definition at line 58 of file File\+Handler.\+cpp.
 
 
 
@@ -101,7 +122,7 @@ Referenced by Parse\+\_\+\+File\+\_\+content\+::call\+\_\+exit\+\_\+fun().
 
 
 
-Definition at line 24 of file File\+Handler.\+cpp.
+Definition at line 30 of file File\+Handler.\+cpp.
 
 
 
@@ -119,7 +140,14 @@ Referenced by Parse\+\_\+\+File\+\_\+content\+::counting\+\_\+words(), exit\+\_\
 
 
 
-Definition at line 29 of file File\+Handler.\+cpp.
+This function will open the txt file. 
+
+\begin{DoxyReturn}{Returns}
+file\+\_\+statuse a boolean value of the file status \char`\"{}\+True\char`\"{} if the file was successfully open or \char`\"{}\+False\char`\"{} if not 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file File\+Handler.\+cpp.
 
 
 
@@ -140,7 +168,11 @@ Referenced by main(), and Parse\+\_\+\+File\+\_\+content\+::read\+\_\+file().
 
 
 
-Definition at line 29 of file File\+Handler.\+h.
+variable to save the path of the file. 
+
+
+
+Definition at line 30 of file File\+Handler.\+h.
 
 
 
